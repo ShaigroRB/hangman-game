@@ -1,0 +1,5 @@
+public enum LETTER_VALIDITY {
+    INVALID_LETTER,
+    VALID_LETTER,
+    NOT_A_LETTER
+}
