@@ -27,5 +27,5 @@ public class MainHangman {
         else {
             System.out.println("You win !");
         }
-    }
+        in.close();    }
 }
