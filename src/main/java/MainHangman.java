@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class MainHangman {
     public static void main(String... args) {
         Hangman hangman = new Hangman();
-        hangman.setWord("robot");
+        FileHandler fileHandler = new FileHandler("hangman.txt");
+        hangman.setWord(fileHandler.getRandomWordFromFile());
 
         String letter;
         Scanner in = new Scanner(System.in);
@@ -23,9 +24,10 @@ public class MainHangman {
         } while ((!hangman.isEndOfGame()));
         if (hangman.isGameOver()) {
             System.out.println("You lost !");
-        }
-        else {
+        } else {
+            System.out.println(hangman.wordToLine());
             System.out.println("You win !");
         }
-        in.close();    }
+        in.close();
+    }
 }
